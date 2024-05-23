@@ -41,23 +41,28 @@ class IngresoController extends Controller
     //para eso, en este caso se necesita el id y el request 
     //( permite el acceso a toda la información que pasa desde el navegador del cliente al servidor.)
         $datos = $request->all();
-        $contacto = Ingreso::find($id);
-        $contacto->nombre = $datos['nombre'];
-        $contacto->email = $datos['email'];
-        $contacto->telefono = $datos['telefono'];
-        $contacto->save();
-        $data = ['data' => $contacto];
+        $ingreso = Ingreso::find($id);//se llamaron los datos
+        $ingreso->codigoEstudiante = $datos['codigoEstudiante'];//asigno los datos a mi modelo
+        $ingreso->nombreEstudiante = $datos['nombreEstudiante'];
+        $ingreso->idPrograma = $datos['idPrograma'];
+        $ingreso->fechaIngreso = $datos['fechaIngreso'];
+        $ingreso->horaIngreso = $datos['horaIngreso'];
+        $ingreso->horaSalida = $datos['horaSalida'];
+        $ingreso->idResponsableSala = $datos['idResponsable'];
+        $ingreso->idSala = $datos['idSala'];
+        $ingreso->save();//guardo los cambios
+        $data = ['data' => $ingreso];
         return response()->json($data);
     }
 
     function destroy($id)
     {
-        $contacto = Ingreso::find($id);
-        if (empty($contacto)) {
+        $ingreso = Ingreso::find($id);
+        if (empty($ingreso)) {
             $data = ['data' => 'No se encuentra registrado el contacto'];
             return response()->json($data, 404);
         }
-        $contacto->delete();
+        $ingreso->delete();
         $data = ['data' => 'Datos eliminados'];
         return response()->json($data);
     }
