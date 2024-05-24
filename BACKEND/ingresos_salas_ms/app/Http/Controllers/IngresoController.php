@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ingreso;
 use Illuminate\Http\Request;
 
-class IngresoController extends Controller
-{
+class IngresoController extends Controller{
     function index()//Consulta general de todos los datos
     {
         $ingresos = Ingreso::all();//esta linea hace lo mismo que el SELECT * FROM ... todo el proceso para incluir datos a la base de datos la hace de forma más rapida
