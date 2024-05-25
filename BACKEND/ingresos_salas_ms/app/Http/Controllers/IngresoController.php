@@ -38,7 +38,7 @@ class IngresoController extends Controller{
 
     function update($id, Request $request){//hacer cambios(modificaciones)
     //para eso, en este caso se necesita el id y el request 
-    //( permite el acceso a toda la información que pasa desde el cliente (navegador) al servidor.)
+    //( permite el acceso a toda la información que pasa desde el cliente (nave) al servidor.)
         $datos = $request->all();
         $ingreso = Ingreso::find($id);//se llamaron los datos
         $ingreso->codigoEstudiante = $datos['codigoEstudiante'];//asigno los datos a mi modelo
@@ -58,7 +58,7 @@ class IngresoController extends Controller{
     {
         $ingreso = Ingreso::find($id);
         if (empty($ingreso)) {
-            $data = ['data' => 'No se encuentra registrado el contacto'];
+            $data = ['data' => 'No se encuentran ingresos registrados'];
             return response()->json($data, 404);
         }
         $ingreso->delete();
