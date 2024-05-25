@@ -38,7 +38,7 @@ class IngresoController extends Controller{
 
     function update($id, Request $request){//hacer cambios(modificaciones)
     //para eso, en este caso se necesita el id y el request 
-    //( permite el acceso a toda la información que pasa desde el cliente (navegador) al servidor.)
+    //( permite el acceso a toda la información que pasa desde el navegador del cliente al servidor.)
         $datos = $request->all();
         $ingreso = Ingreso::find($id);//se llamaron los datos
         $ingreso->codigoEstudiante = $datos['codigoEstudiante'];//asigno los datos a mi modelo

@@ -2,6 +2,7 @@
   namespace App\Http\Controllers; //namespace es la dirección de la ubicacion de la clase que estamos trabajando
 
 use App\Models\Horario;
+use Illuminate\Http\Request;
 
   class HorarioServicioController extends Controller{
 
@@ -17,10 +18,13 @@ use App\Models\Horario;
         return response()->json($data);
       }
 
-      /*function store(Request $request){
+      function store(Request $request){
         $datos = $request->all();
         $horario = new Horario();
         $horario->dia = $datos['dias'];
-      }*/
+        $horario->save();
+        $data = ['data' => $horario];
+        return response()->json($data);
+      }
   }
 ?>
