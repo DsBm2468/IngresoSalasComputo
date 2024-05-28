@@ -31,6 +31,11 @@ class IngresoController extends Controller{
         $ingreso->horaSalida = $datos['horaSalida'];
         $ingreso->idResponsableSala = $datos['idResponsable'];
         $ingreso->idSala = $datos['idSala'];
+        //CONDICION
+        if($ingreso){
+
+        }
+
         $ingreso->save();
         $data = ['data' => $ingreso];
         return response()->json($data);
