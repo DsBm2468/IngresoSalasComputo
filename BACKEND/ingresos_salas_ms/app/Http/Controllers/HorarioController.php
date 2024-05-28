@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
         $data = ['data' => $horarios];//forma de estructurar la respuesta (OPCIONAL)
         return response()->json($data);//generar la respuesta en formato json
       }
-      
+
       function show($id){
         $horarios = Horario::find($id);
         $data = ['data' => $horarios];//forma de estructurar la respuesta (OPCIONAL)
@@ -24,7 +24,7 @@ use Illuminate\Http\Request;
         $horario->dia = $datos['dias'];
       }*/
 
-      function store(Request $request){//Registrar un nuevo elemento (insert into ...) 
+      function store(Request $request){//Registrar un nuevo elemento (insert into ...)
         $datos = $request->all();
         $horarios = new Horario();
         $horarios->dia = $datos['dia'];
@@ -33,13 +33,18 @@ use Illuminate\Http\Request;
         $horarios->horaFin = $datos['horaFin'];
         $horarios->idPrograma  = $datos['idPrograma'];
         $horarios->idSala  = $datos['idSala'];
+
+        if($horarios){
+          // CONDICION
+        }
+
         $horarios->save();
         $data = ['data' => $horarios];
         return response()->json($data);
     }
 
     function update($id, Request $request){//hacer cambios(modificaciones)
-      //para eso, en este caso se necesita el id y el request 
+      //para eso, en este caso se necesita el id y el request
       //( permite el acceso a toda la información que pasa desde el cliente (nave) al servidor.)
           $datos = $request->all();
           $horarios = Horario::find($id);//se llamaron los datos
@@ -53,18 +58,18 @@ use Illuminate\Http\Request;
           $data = ['data' => $horarios];
           return response()->json($data);
       }
-  
-      function destroy($id)
-      {
-          $ingreso = Horario::find($id);
-          if (empty($ingreso)) {
-              $data = ['data' => 'No se encuentran salas ocupadas'];
-              return response()->json($data, 404);
-          }
-          $ingreso->delete();
-          $data = ['data' => 'Datos eliminados'];
-          return response()->json($data);
-      }
+
+      // function destroy($id)
+      // {
+      //     $ingreso = Horario::find($id);
+      //     if (empty($ingreso)) {
+      //         $data = ['data' => 'No se encuentran salas ocupadas'];
+      //         return response()->json($data, 404);
+      //     }
+      //     $ingreso->delete();
+      //     $data = ['data' => 'Datos eliminados'];
+      //     return response()->json($data);
+      // }
 
   }
 

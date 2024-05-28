@@ -54,20 +54,23 @@ class IngresoController extends Controller{
         $ingreso->horaSalida = $datos['horaSalida'];
         $ingreso->idResponsableSala = $datos['idResponsable'];
         $ingreso->idSala = $datos['idSala'];
+
+        // CONDICION
+
         $ingreso->save();//guardo los cambios
         $data = ['data' => $ingreso];
         return response()->json($data);
     }
 
-    function destroy($id)
-    {
-        $ingreso = Ingreso::find($id);
-        if (empty($ingreso)) {
-            $data = ['data' => 'No se encuentran ingresos registrados'];
-            return response()->json($data, 404);
-        }
-        $ingreso->delete();
-        $data = ['data' => 'Datos eliminados'];
-        return response()->json($data);
-    }
+    // function destroy($id)
+    // {
+    //     $ingreso = Ingreso::find($id);
+    //     if (empty($ingreso)) {
+    //         $data = ['data' => 'No se encuentran ingresos registrados'];
+    //         return response()->json($data, 404);
+    //     }
+    //     $ingreso->delete();
+    //     $data = ['data' => 'Datos eliminados'];
+    //     return response()->json($data);
+    // }
 }

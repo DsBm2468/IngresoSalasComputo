@@ -2,15 +2,32 @@
 GET http://127.0.0.1:8000/
 Content-Type: text/html
 
-### Listar ingresos a la sala
+# ---------- CONSULTA GENERAL (INDEX-GET) --------------
+
+### TABLA INGRESOS
 GET http://127.0.0.1:8000/api/ingresos
 Content-Type: application/json
-
-### Consultar un ingreso a la sala
-GET http://127.0.0.1:8000/api/ingresos/13
+### TABLA HORARIOS
+GET http://127.0.0.1:8000/api/horarios
+Content-Type: application/json
+### TABLA PROGRAMAS
+GET http://127.0.0.1:8000/api/programas
 Content-Type: application/json
 
-### Registrar un ingreso a la sala
+
+# ---------- CONSULTA ESPECIFICA (SHOW-GET) --------------
+
+### TABLA INGRESOS
+GET http://127.0.0.1:8000/api/ingresos/13
+Content-Type: application/json
+### TABLA HORARIOS
+GET http://127.0.0.1:8000/api/horarios/13
+Content-Type: application/json
+
+
+# ---------- REGISTRAR (STORE-POST) --------------
+
+### TABLA INGRESOS
 POST http://127.0.0.1:8000/api/ingresos
 Content-Type: application/json
 
@@ -25,26 +42,7 @@ Content-Type: application/json
    "idSala":"4"
 }
 
-### Actualizar datos de un ingreso a la sala
-PUT http://127.0.0.1:8000/api/ingresos/13
-Content-Type: application/json
-
-{
-   "codigoEstudiante": "5566778899",
-   "nombreEstudiante": "Anita latina",
-}
-
-
-
-### Listar horarios de sala
-GET http://127.0.0.1:8000/api/horarios
-Content-Type: application/json
-
-### Consultar horarios de sala
-GET http://127.0.0.1:8000/api/horarios/13
-Content-Type: application/json
-
-### Registrar horarios de sala
+### TABLA HORARIOS
 POST http://127.0.0.1:8000/api/horarios
 Content-Type: application/json
 
@@ -56,3 +54,20 @@ Content-Type: application/json
    "idPrograma":"1",
    "idSala":"4"
 }
+
+# ---------- ACTUALIZAR (UPDATE-PUT) --------------
+
+### TABLA INGRESOS
+PUT http://127.0.0.1:8000/api/ingresos/13
+Content-Type: application/json
+
+{
+   "codigoEstudiante": "5566778899",
+   "nombreEstudiante": "Anita latina",
+}
+
+
+
+
+
+
