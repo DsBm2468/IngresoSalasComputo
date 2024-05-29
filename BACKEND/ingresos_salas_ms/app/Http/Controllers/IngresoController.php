@@ -28,8 +28,8 @@ class IngresoController extends Controller{
         $ingreso->idPrograma = $datos['idPrograma'];
         $ingreso->fechaIngreso = $datos['fechaIngreso'];
         $ingreso->horaIngreso = $datos['horaIngreso'];
-        $ingreso->horaSalida = $datos['horaSalida'];
-        $ingreso->idResponsableSala = $datos['idResponsable'];
+        // $ingreso->horaSalida = $datos['horaSalida'];
+        $ingreso->idResponsable = $datos['idResponsable'];
         $ingreso->idSala = $datos['idSala'];
         //CONDICION
         if($ingreso){
@@ -48,12 +48,12 @@ class IngresoController extends Controller{
         $ingreso = Ingreso::find($id);//se llamaron los datos
         $ingreso->codigoEstudiante = $datos['codigoEstudiante'];//asigno los datos a mi modelo
         $ingreso->nombreEstudiante = $datos['nombreEstudiante'];
-        $ingreso->idPrograma = $datos['idPrograma'];
-        $ingreso->fechaIngreso = $datos['fechaIngreso'];
-        $ingreso->horaIngreso = $datos['horaIngreso'];
+        // $ingreso->idPrograma = $datos['idPrograma'];
+        // $ingreso->fechaIngreso = $datos['fechaIngreso'];
+        // $ingreso->horaIngreso = $datos['horaIngreso'];
         $ingreso->horaSalida = $datos['horaSalida'];
-        $ingreso->idResponsableSala = $datos['idResponsable'];
-        $ingreso->idSala = $datos['idSala'];
+        // $ingreso->idResponsableSala = $datos['idResponsable'];
+        // $ingreso->idSala = $datos['idSala'];
 
         // CONDICION
 

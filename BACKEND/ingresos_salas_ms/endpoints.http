@@ -35,10 +35,10 @@ Content-Type: application/json
    "codigoEstudiante": "587906778",
    "nombreEstudiante": "Anita la la tina",
    "idPrograma":"1",
-   "fechaIngreso":"29/05/2024",
-   "horaIngreso":"2:00pm",
-   "horaSalida":"4:00pm",
-   "idResponsableSala":"2",
+   "fechaIngreso":"2024/05/29",
+   "horaIngreso":"14:00",
+
+   "idResponsable":"2",
    "idSala":"4"
 }
 
