@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingreso a Salas De Computo</title>
+  </head>
+  <body>
+    <h1>Lista de ingresos a las salas de computo</h1>
+    <table id="ingresosTable">
+      <thead>
+        <tr>
+          <th>Código del estudiante</th>
+          <th>Nombre del estudiante</th>
+          <th>Programa</th>
+          <th>Fecha del ingreso</th>
+          <th>Hora del ingreso</th>
+          <th>Hora de salida</th>
+          <th>Persona responsable del ingreso</th>
+          <th>Sala</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <form name="contactoForm" id="contactoForm">
+        <div>
+            <label>Nombre</label>
+            <input type="text" name="nombre">
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label>Telefono</label>
+            <input type="text" name="telefono">
+        </div>
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+    <script src="js/consulta.js"></script>
+  </body>
+</html>
