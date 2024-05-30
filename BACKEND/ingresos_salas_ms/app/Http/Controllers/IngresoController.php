@@ -53,15 +53,9 @@ class IngresoController extends Controller{
     //( permite el acceso a toda la información que pasa desde el cliente (nave) al servidor.)
         $datos = $request->all();
         $ingreso = Ingreso::find($id);//se llamaron los datos
-        $ingreso->codigoEstudiante = $datos['codigoEstudiante'];//asigno los datos a mi modelo
-        $ingreso->nombreEstudiante = $datos['nombreEstudiante'];
-        $ingreso->idPrograma = $datos['idPrograma'];
-        $ingreso->fechaIngreso = $datos['fechaIngreso'];
-        $ingreso->horaIngreso = $datos['horaIngreso'];
         $ingreso->horaSalida = $datos['horaSalida'];
-        $ingreso->idResponsable = $datos['idResponsable'];
-        $ingreso->idSala = $datos['idSala'];
-
+        // MIRAR LAS OTRAS INSERCCIONES DE COD. ESTUD Y NOMBRE ESTUD.
+        // SE COLOCAN LAS COLUMNAS NECESARIAS
         // CONDICION
 
         $ingreso->save();//guardo los cambios

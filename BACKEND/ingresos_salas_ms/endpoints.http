@@ -8,20 +8,35 @@ Content-Type: text/html
 GET http://127.0.0.1:8000/api/ingresos
 Content-Type: application/json
 ### TABLA HORARIOS
-GET http://127.0.0.1:8000/api/horarios
+GET http://127.0.0.1:8000/api/horarios_salas
 Content-Type: application/json
 ### TABLA PROGRAMAS
 GET http://127.0.0.1:8000/api/programas
+Content-Type: application/json
+### TABLA RESPONSABLES
+GET http://127.0.0.1:8000/api/responsables
+Content-Type: application/json
+### TABLA SALAS
+GET http://127.0.0.1:8000/api/salas
 Content-Type: application/json
 
 
 # ---------- CONSULTA ESPECIFICA (SHOW-GET) -------------- 
 
 ### TABLA INGRESOS
-GET http://127.0.0.1:8000/api/ingresos/13
+GET http://127.0.0.1:8000/api/ingresos/1
 Content-Type: application/json
 ### TABLA HORARIOS
-GET http://127.0.0.1:8000/api/horarios/13
+GET http://127.0.0.1:8000/api/horarios_salas/1
+Content-Type: application/json
+### TABLA PROGRAMAS
+GET http://127.0.0.1:8000/api/programas/1
+Content-Type: application/json
+### TABLA RESPONSABLES
+GET http://127.0.0.1:8000/api/responsables/1
+Content-Type: application/json
+### TABLA SALAS
+GET http://127.0.0.1:8000/api/salas/1
 Content-Type: application/json
 
 
@@ -32,28 +47,29 @@ POST http://127.0.0.1:8000/api/ingresos
 Content-Type: application/json
 
 {
-   "codigoEstudiante": "1006554280",
-   "nombreEstudiante": "Daniel Rodriguez",
-   "idPrograma":"2",
-   "fechaIngreso":"2024/05/21",
-   "horaIngreso":"12:35",
+   "codigoEstudiante": "19486101",
+   "nombreEstudiante": "Alvaro Rodriguez",
+   "idPrograma":"3",
+   "fechaIngreso":"2024/05/30",
+   "horaIngreso":"9:01",
    "horaSalida":null,
-   "idResponsable":"3",
-   "idSala":"4"
+   "idResponsable":"2",
+   "idSala":"3"
 }
 
 ### TABLA HORARIOS
-POST http://127.0.0.1:8000/api/horarios
+POST http://127.0.0.1:8000/api/horarios_salas
 Content-Type: application/json
 
 {
-   "dia": "Sábado",
-   "materia": "Programación",
-   "horaInicio":"10:00am",
-   "horaFin":"12:00pm",
-   "idPrograma":"1",
-   "idSala":"4"
+   "dia":"Martes",
+   "materia":"Dibujo",
+   "horaInicio":"14:00",
+   "horaFin":"18:20",
+   "idPrograma ":"1",
+   "idSala ":"1"
 }
+
 
 # ---------- ACTUALIZAR (UPDATE-PUT) --------------
 
@@ -62,10 +78,22 @@ PUT http://127.0.0.1:8000/api/ingresos/4
 Content-Type: application/json
 
 {
-
-   "horaSalida":"15:23",
-
+   "horaSalida":"15:23"
 }
+
+### TABLA HORARIO SALAS
+PUT http://127.0.0.1:8000/api/horarios_salas/4
+Content-Type: application/json
+
+{
+   "dia":"Martes",
+   "materia":"Dibujo",
+   "horaInicio":"14:59",
+   "horaFin":"18:20",
+   "idPrograma ":"1",
+   "idSala ":"1"
+}
+
 
 
 

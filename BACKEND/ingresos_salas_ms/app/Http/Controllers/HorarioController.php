@@ -34,10 +34,9 @@ use Illuminate\Http\Request;
         $horarios->idPrograma  = $datos['idPrograma'];
         $horarios->idSala  = $datos['idSala'];
 
-        if($horarios){
-          // CONDICION
-        }
+        // CONDICION
         $horarios->save();
+        
         $data = ['data' => $horarios];
         return response()->json($data);
     }
@@ -57,6 +56,8 @@ use Illuminate\Http\Request;
           $data = ['data' => $horarios];
           return response()->json($data);
       }
+
+
 
       // function destroy($id)
       // {
