@@ -32,9 +32,16 @@ class IngresoController extends Controller{
         $ingreso->idResponsable = $datos['idResponsable'];
         $ingreso->idSala = $datos['idSala'];
         //CONDICION
-        if($ingreso){
-
-        }
+        /*if($ingreso->fechaIngreso = "Mond" OR "Tue" OR "Wed" Or "Thu" OR "Fri"){
+            if($ingreso->horaIngreso = "7:00-20:50"){
+                echo "";
+            }
+        } else
+        if($ingreso->fechaIngreso = "Sat") {
+            if($ingreso->horaIngreso = "7:00-16:30"){
+                echo ""; 
+            }
+        }*/
 
         $ingreso->save();
         $data = ['data' => $ingreso];   

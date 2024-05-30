@@ -15,7 +15,7 @@ GET http://127.0.0.1:8000/api/programas
 Content-Type: application/json
 
 
-# ---------- CONSULTA ESPECIFICA (SHOW-GET) --------------
+# ---------- CONSULTA ESPECIFICA (SHOW-GET) -------------- 
 
 ### TABLA INGRESOS
 GET http://127.0.0.1:8000/api/ingresos/13

@@ -37,7 +37,6 @@ use Illuminate\Http\Request;
         if($horarios){
           // CONDICION
         }
-
         $horarios->save();
         $data = ['data' => $horarios];
         return response()->json($data);
