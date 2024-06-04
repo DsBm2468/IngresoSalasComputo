@@ -47,14 +47,14 @@ POST http://127.0.0.1:8000/api/ingresos
 Content-Type: application/json
 
 {
-   "codigoEstudiante": "19486101",
-   "nombreEstudiante": "Alvaro Rodriguez",
-   "idPrograma":"3",
-   "fechaIngreso":"2024/05/30",
-   "horaIngreso":"9:01",
+   "codigoEstudiante": "1006554280",
+   "nombreEstudiante": "Daniel Astaiza",
+   "idPrograma":"2",
+   "fechaIngreso":"2024/06/4",
+   "horaIngreso":"10:00",
    "horaSalida":null,
-   "idResponsable":"2",
-   "idSala":"3"
+   "idResponsable":"1",
+   "idSala":"2"
 }
 
 ### TABLA HORARIOS

@@ -1,5 +1,5 @@
 function consultarProductos() {
-  //   fetch("https://fakestoreapi.com/products")
+  //   fetch("https://fakestoreapi.com/products") URL API
   //     .then((response) => {
   //       console.log(response);
   //       return response.json();
@@ -14,7 +14,7 @@ function consultarProductos() {
   //         console.log('Servicio consumido!!!!');
   //     });
 
-  const servicio = fetch("https://fakestoreapi.com/products");
+  const servicio = fetch("https://fakestoreapi.com/products"); // URL API
   const resp = servicio.then((response) => {
     console.log(response);
     return response.json();
