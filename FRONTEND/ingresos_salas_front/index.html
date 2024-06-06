@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ingresos a Salas De Computo</title>
-  </head>
-  <body>
-    <h1>Lista de ingresos del dia de hoy</h1>
-    <table border="1" id="ingresosTabla" name="tabla1">
-      <thead>
-        <tr>
-          <th>Código del estudiante</th>
-          <th>Nombre del estudiante</th>
-          <th>Programa</th>
-          <th>Fecha del ingreso</th>
-          <th>Hora del ingreso</th>
-          <th>Hora de salida</th>
-          <th>Responsable</th>
-          <th>Sala</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- espacio para que aparezcan los datos -->
-      </tbody>
-    </table>
-    <!--<form name="contactoForm" id="contactoForm">
-        <div>
-            <label>Nombre</label>
-            <input type="text" name="nombre">
-        </div>
-        <div>
-            <label>Email</label>
-            <input type="email" name="email">
-        </div>
-        <div>
-            <label>Telefono</label>
-            <input type="text" name="telefono">
-        </div>
-        <div>
-            <button type="submit">Guardar</button>
-        </div>
-    </form>-->
-    <script src="../ingresos_salas_front/js/consulta.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingresos a Salas De Computo</title>
+</head>
+
+<body>
+  <h1>Lista de ingresos del dia de hoy</h1>
+  <table border="1" id="ingresosTabla" name="tabla1">
+    <thead>
+      <tr>
+        <th>Código del estudiante</th>
+        <th>Nombre del estudiante</th>
+        <th>Programa</th>
+        <th>Fecha del ingreso</th>
+        <th>Hora del ingreso</th>
+        <th>Hora de salida</th>
+        <th>Responsable</th>
+        <th>Sala</th>
+      </tr>
+    </thead>
+  </table>
+  <br>
+  <h1>Filtrar</h1>
+
+  <h2>Por codigo de estudiante</h2>
+  <form name="formCod" id="formCod">
+    <div>
+      <label>Codigo</label>
+      <input type="number" name="codEst">
+      <button type="submit">Cargar</button>
+    </div>
+  </form>
+
+  <h2>Por el programa academico</h2>
+  <form name="formPro" id="formPro">
+    <div>
+      <label>Programa</label>
+      <input type="text" name="prog">
+      <button type="submit">Cargar</button>
+    </div>
+  </form>
+
+  <h2>Por el encargado de la sala</h2>
+  <form name="formEnc" id="formEnc">
+    <div> 
+      <label>Nombre encargado</label>
+      <input type="text" name="nomEnc">
+      <button type="submit">Cargar</button>
+    </div>
+  </form>
+
+
+  <script src="../ingresos_salas_front/js/consulta.js"></script>
+</body>
+
 </html>

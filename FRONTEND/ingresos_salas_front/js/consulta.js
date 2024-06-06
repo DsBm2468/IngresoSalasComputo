@@ -82,7 +82,7 @@ function displayIngresos(ingresosT) {
     const tabla= document.getElementById('ingresosTabla');
     const fila=tabla.insertRow(1);
     const columna=fila.insertCell(0);
-    columna.innerHTML="No hay inscritos el dia de hoy";
+    columna.innerHTML="No hay inscritos";
 } else {
         var i=0;
         var fila=null;
@@ -111,28 +111,39 @@ function displayIngresos(ingresosT) {
   }
 }
 
-// function registrarContacto() {
-//   const form = document.forms["contactoForm"];
-//   const contacto = {
-//     nombre: form["nombre"].value,
-//     email: form["email"].value,
-//     telefono: form["telefono"].value,
-//   };
-//   fetch(urlIngresos, {
-//     method: "post",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(contacto),
-//   })
-//     .then((resp) => resp.json())
-//     .then((body) => {
-//       const newContacto = body.data;
-//       contactos.push(newContacto);
-//       cargarTablaContactos();
-//       //consultarContactos();
-//     });
-// }
+function filtrarCodigo() {
+   const form = document.forms["formCod"];
+   const codigo = {
+    codigoEstudiante: form["codEst"].value,
+   };
+   
+   if(codigo){
+    const tabla= document.getElementById('ingresosTabla');
+    ingresosT.forEach(ingFila => {
+        i+=1;
+        fila=tabla.insertRow(i);
+        columna = fila.insertCell(0);
+        columna.innerHTML = ingFila.codigoEstudiante;
+        columna = fila.insertCell(1);
+        columna.innerHTML  =ingFila.nombreEstudiante;
+        columna = fila.insertCell(2);
+        columna.innerHTML  =ingFila.idPrograma;
+        columna = fila.insertCell(3);
+        columna.innerHTML  =ingFila.fechaIngreso;
+        columna = fila.insertCell(4);
+        columna.innerHTML  =ingFila.horaIngreso;
+        columna = fila.insertCell(5);
+        columna.innerHTML  =ingFila.horaSalida;
+        columna = fila.insertCell(6);
+        columna.innerHTML  =ingFila.idResponsable;
+        columna = fila.insertCell(7);
+        columna.innerHTML  =ingFila.idSala;
+    });
+   }
+   
+ 
+
+ }
 
 // function eliminarContacto(id) {
 //   fetch(urlIngresos + "/" + id, { method: "delete" })

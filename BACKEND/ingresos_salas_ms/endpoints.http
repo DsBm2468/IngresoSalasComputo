@@ -47,14 +47,14 @@ POST http://127.0.0.1:8000/api/ingresos
 Content-Type: application/json
 
 {
-   "codigoEstudiante": "1118562074",
-   "nombreEstudiante": "Ana Maria",
-   "idPrograma":"4",
-   "fechaIngreso":"2024/06/06",
-   "horaIngreso":"13:00",
+   "codigoEstudiante": "55823012",
+   "nombreEstudiante": "Dankel Daraz",
+   "idPrograma":"3",
+   "fechaIngreso":"2024/06/05",
+   "horaIngreso":"12:35",
    "horaSalida":null,
-   "idResponsable":"4",
-   "idSala":"3"
+   "idResponsable":"1",
+   "idSala":"1"
 }
 
 ### TABLA HORARIOS
@@ -74,11 +74,11 @@ Content-Type: application/json
 # ---------- ACTUALIZAR (UPDATE-PUT) --------------
 
 ### TABLA INGRESOS
-PUT http://127.0.0.1:8000/api/ingresos/4
+PUT http://127.0.0.1:8000/api/ingresos/6
 Content-Type: application/json
 
 {
-   "horaSalida":"15:23"
+   "fechaIngreso":"2024/06/06"
 }
 
 ### TABLA HORARIO SALAS
