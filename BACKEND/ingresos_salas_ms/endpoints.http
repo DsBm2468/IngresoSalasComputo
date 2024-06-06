@@ -48,13 +48,13 @@ Content-Type: application/json
 
 {
    "codigoEstudiante": "1118562074",
-   "nombreEstudiante": "David Felipe",
+   "nombreEstudiante": "Ana Maria",
    "idPrograma":"4",
-   "fechaIngreso":"2024/06/5",
-   "horaIngreso":"16:35",
+   "fechaIngreso":"2024/06/06",
+   "horaIngreso":"13:00",
    "horaSalida":null,
-   "idResponsable":"2",
-   "idSala":"1"
+   "idResponsable":"4",
+   "idSala":"3"
 }
 
 ### TABLA HORARIOS
